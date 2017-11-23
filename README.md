@@ -28,5 +28,5 @@ $ vagrant up
 cd ansible
 echo '[all]' > inventory
 echo 'localhost' >> inventory
-ansible-playbook -i inventory -u $USER -c local --extra-vars "ansible-distribution=Ubuntu" --extra-vars "ansible_os_family=Debian" --extra-vars "ansible_distribution_release=xenial" --extra-vars "ansible_become_pass=SUDOPASSWD" elementary-dev.yml
+ansible-playbook -i inventory -u $USER -c local --extra-vars "ansible-distribution=Ubuntu" --extra-vars "ansible_os_family=Debian" --extra-vars "ansible_distribution_release=xenial" --extra-vars "ansible_sudo_pass=SUDOPASSWD" elementary-dev.yml
 ```

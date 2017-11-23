@@ -1,0 +1,19 @@
+# Vagrant folder
+/.vagrant
+
+# tmp folder
+/tmp
+
+# packer cache folder
+/packer_cache
+
+# iso folder
+/iso/*
+!/iso/.gitkeep
+
+# build folder
+/build/*
+!/build/.gitkeep
+
+# ansible retry file
+ansible/elementary-dev.retry

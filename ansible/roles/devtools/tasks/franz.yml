@@ -1,0 +1,21 @@
+---
+
+- name: check if newer install
+  stat:
+    path: ~/.ansible_devtools
+  register: new_install
+
+- name: Download file from a file path
+  get_url:
+    url: https://github.com/meetfranz/franz/releases/download/v{{ franz_version }}/franz_{{ franz_version }}_amd64.deb
+    dest: /tmp/franz.deb
+  when: not new_install.stat.exists
+
+- name: install franz package
+  shell: >
+    dpkg -i /tmp/franz.deb;
+    apt-get -f install -y --force-yes;
+    rm -f /tmp/franz.deb;
+  become: yes
+  ignore_errors: yes
+  when: not new_install.stat.exists

@@ -1,0 +1,45 @@
+[submodule "ansible/roles/sublimetext"]
+	path = ansible/roles/sublimetext
+	url = https://github.com/jdauphant/ansible-role-sublimetext
+[submodule "ansible/roles/atom"]
+	path = ansible/roles/atom
+	url = https://github.com/gantsign/ansible-role-atom
+[submodule "ansible/roles/atom-packages"]
+	path = ansible/roles/atom-packages
+	url = https://github.com/gantsign/ansible-role-atom-packages
+[submodule "ansible/roles/chrome"]
+	path = ansible/roles/chrome
+	url = https://github.com/cmprescott/ansible-role-chrome
+[submodule "ansible/roles/git"]
+	path = ansible/roles/git
+	url = https://github.com/geerlingguy/ansible-role-git
+[submodule "ansible/roles/docker"]
+	path = ansible/roles/docker
+	url = https://github.com/geerlingguy/ansible-role-docker
+[submodule "ansible/roles/oh-my-zsh"]
+	path = ansible/roles/oh-my-zsh
+	url = https://github.com/gantsign/ansible-role-oh-my-zsh
+[submodule "ansible/roles/fonts"]
+	path = ansible/roles/fonts
+	url = https://github.com/ontic/ansible-role-fonts
+[submodule "ansible/roles/vagrant"]
+	path = ansible/roles/vagrant
+	url = https://github.com/FGtatsuro/ansible-vagrant
+[submodule "ansible/roles/virtualbox"]
+	path = ansible/roles/virtualbox
+	url = https://github.com/FGtatsuro/ansible-virtualbox
+[submodule "ansible/roles/FGtatsuro.python-requirements"]
+	path = ansible/roles/FGtatsuro.python-requirements
+	url = https://github.com/FGtatsuro/ansible-python-requirements
+[submodule "ansible/roles/FGtatsuro.virtualbox"]
+	path = ansible/roles/FGtatsuro.virtualbox
+	url = https://github.com/FGtatsuro/ansible-virtualbox
+[submodule "ansible/roles/base"]
+	path = ansible/roles/base
+	url = https://github.com/ricofehr/ansible-role-base
+[submodule "ansible/roles/gitconfig"]
+	path = ansible/roles/gitconfig
+	url = https://github.com/ricofehr/ansible-role-gitconfig
+[submodule "ansible/roles/repos"]
+	path = ansible/roles/repos
+	url = https://github.com/ricofehr/ansible-role-repos

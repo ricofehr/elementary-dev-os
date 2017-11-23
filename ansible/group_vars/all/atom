@@ -1,0 +1,36 @@
+---
+
+users:
+  - username: vagrant
+    atom_packages:
+       - linter
+       - atom-beautify
+       - atom-css-comb
+       - autoclose-html
+       - color-picker
+       - language-docker
+       - language-puppet
+       - minimap
+       - minimap-highlight-selected
+       - pigments
+       - todo-show
+       - file-icons
+    atom_config:
+      "*":
+        core:
+          projectHome: "/home/vagrant/Work/git"
+          telemetryConsent: "no"
+        editor:
+          preferredLineLength: 120
+          showInvisibles: true
+          tabType: "soft"
+          showIndentGuide: true
+          showInvisibles: true
+          minimap:
+            plugins:
+              "highlight-selected": true
+              "highlight-selectedDecorationsZIndex": 0
+              pigments: true
+              pigmentsDecorationsZIndex: 0
+          welcome:
+            showOnStartup: false

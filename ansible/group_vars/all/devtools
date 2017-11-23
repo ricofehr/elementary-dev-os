@@ -1,0 +1,16 @@
+---
+
+packages:
+  - firefox
+  - tcpdump
+  - ncftp
+  - htop
+  - terminator
+  - iperf
+  - nmap
+  - dia
+  - thunderbird
+  - gimp
+  - vlc
+
+franz_version: '5.0.0-beta.13'

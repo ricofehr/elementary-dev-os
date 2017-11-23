@@ -1,0 +1,46 @@
+---
+
+- hosts: all
+  gather_facts: yes
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+    - oh-my-zsh
+    - base
+    - repos
+    - devtools
+    - { role: git, become: yes }
+    - gitconfig
+    - repos
+    - fonts
+    - { role: chrome, become: yes }
+    - atom
+    - { role: sublimetext, become: yes }
+    - FGtatsuro.python-requirements
+    - FGtatsuro.virtualbox
+    - vagrant
+
+  pre_tasks:
+    - name: Wait for App Center (sigh...)
+      shell: >
+        while fuser /var/lib/apt/lists/lock; do sleep 1; done;
+        while fuser /var/cache/apt/archives/lock; do sleep 1; done;
+        while fuser /var/lib/dpkg/lock; do sleep 1; done;
+      become: true
+      args:
+        executable: /bin/bash
+
+  tasks:
+    - name: Set keyboard layout
+      shell: >
+        export DISPLAY=:0.0;
+        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr'), ('xkb', '{{ keyboard_layout }}')]";
+        gsettings set org.gnome.desktop.input-sources current 1;
+      become: true
+      become_user: vagrant
+
+    - name: Disable Guest account
+      shell: echo "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf
+      become: true

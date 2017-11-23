@@ -1,0 +1,9 @@
+---
+
+gitconfigs:
+  - user.email ricofehr@nextdeploy.io
+  - user.name ricofehr
+  - pull.rebase true
+  - core.ignorecase false
+  - help.autocorrect 1
+  - core.autocrlf input

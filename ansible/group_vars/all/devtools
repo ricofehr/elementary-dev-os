@@ -13,5 +13,6 @@ devtools_packages:
   - gimp
   - vlc
   - gnome-tweak-tool
+  - software-properties-common
 
 franz_version: '5.0.0-beta.13'

@@ -7,3 +7,4 @@ gitconfigs:
   - core.ignorecase false
   - help.autocorrect 1
   - core.autocrlf input
+  - core.pager cat

@@ -38,8 +38,6 @@
         export DISPLAY=:0.0;
         gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr'), ('xkb', '{{ keyboard_layout }}')]";
         gsettings set org.gnome.desktop.input-sources current 1;
-      become: true
-      become_user: vagrant
 
     - name: Disable Guest account
       shell: echo "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf

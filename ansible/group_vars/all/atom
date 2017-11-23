@@ -1,7 +1,7 @@
 ---
 
 users:
-  - username: vagrant
+  - username: "{{ ansible_user }}"
     atom_packages:
        - linter
        - atom-beautify
@@ -22,7 +22,6 @@ users:
           telemetryConsent: "no"
         editor:
           preferredLineLength: 120
-          showInvisibles: true
           tabType: "soft"
           showIndentGuide: true
           showInvisibles: true

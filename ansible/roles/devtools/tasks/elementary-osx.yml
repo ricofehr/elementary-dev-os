@@ -1,0 +1,46 @@
+---
+
+- name: check if newer install
+  stat:
+    path: ~/.ansible_devtools
+  register: new_install
+
+- name: Sync local theme folder to remote
+  synchronize:
+    src: assets/elementary-osx-theme/Themes/
+    dest: /usr/share/themes/
+    compress: no
+    times: no
+  become: yes
+
+- name: Sync local icons folder to remote
+  synchronize:
+    src: assets/elementary-osx-theme/Icons/
+    dest: /usr/share/icons/
+    compress: no
+    times: no
+  become: yes
+
+- name: Install cairo dock
+  shell: >
+     add-apt-repository ppa:cairo-dock-team/ppa;
+     apt-get update;
+     apt-get install -y --force-yes cairo-dock;
+  args:
+    executable: /bin/bash
+  become: yes
+  when: not new_install.stat.exists
+
+- name: Sync local plank folder to remote
+  synchronize:
+    src: assets/elementary-osx-theme/Plank/
+    dest: ~/.local/share/plank/themes/
+    compress: no
+    times: no
+
+- name: Sync wallpaper folder to remote
+  synchronize:
+    src: assets/elementary-osx-theme/sierra.jpg
+    dest: ~/.local/share/backgrounds/
+    compress: no
+    times: no

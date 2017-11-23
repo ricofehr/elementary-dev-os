@@ -12,5 +12,6 @@ packages:
   - thunderbird
   - gimp
   - vlc
+  - gnome-tweak-tool
 
 franz_version: '5.0.0-beta.13'

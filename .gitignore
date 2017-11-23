@@ -17,3 +17,6 @@
 
 # ansible retry file
 ansible/elementary-dev.retry
+
+# ansible custom inventory file
+ansible/inventory

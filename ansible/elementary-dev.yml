@@ -7,20 +7,41 @@
     - vars/main.yml
 
   roles:
-    - oh-my-zsh
-    - base
-    - repos
-    - devtools
-    - { role: git, become: yes }
-    - gitconfig
-    - repos
-    - fonts
-    - { role: chrome, become: yes }
-    - atom
-    - { role: sublimetext, become: yes }
-    - FGtatsuro.python-requirements
-    - FGtatsuro.virtualbox
-    - vagrant
+    - role: oh-my-zsh
+      tags: ['install']
+    - role: base
+      tags: ['install']
+    - role: devtools
+      tags: ['devtool']
+    - role: git
+      become: yes
+      tags: ['devtool', 'git']
+    - role: gitconfig
+      tags: ['devtool', 'git']
+    - role: repos
+      tags: ['devtool', 'git']
+    - role: fonts
+      tags: ['webtool']
+    - role: chrome
+      become: yes
+      tags: ['webtool']
+    - role: atom
+      tags: ['devtool']
+    - role: sublimetext
+      become: yes
+      tags: ['devtool']
+    - role: FGtatsuro.python-requirements
+      tags: ['install']
+    - role: FGtatsuro.virtualbox
+      tags: ['virtualization']
+    - role: libvirtd
+      become: yes
+      tags: ['virtualization']
+    - role: vagrant
+      tags: ['virtualization']
+    - role: docker
+      become: yes
+      tags: ['virtualization']
 
   pre_tasks:
     - name: Wait for App Center (sigh...)
@@ -33,12 +54,6 @@
         executable: /bin/bash
 
   tasks:
-    - name: Set keyboard layout
-      shell: >
-        export DISPLAY=:0.0;
-        gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'fr'), ('xkb', '{{ keyboard_layout }}')]";
-        gsettings set org.gnome.desktop.input-sources current 1;
-
     - name: Disable Guest account
       shell: echo "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf
       become: true

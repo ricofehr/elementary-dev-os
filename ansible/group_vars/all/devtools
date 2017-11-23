@@ -1,6 +1,6 @@
 ---
 
-packages:
+devtools_packages:
   - firefox
   - tcpdump
   - ncftp

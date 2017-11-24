@@ -1,0 +1,9 @@
+---
+
+- name: Launch vms
+  shell: vagrant up >> /tmp/vagrant.log 2>&1
+  args:
+    chdir: "{{ item }}"
+    executable: /bin/bash
+  with_items: "{{ vagrantup_list }}"
+  when: vagrantup_enable

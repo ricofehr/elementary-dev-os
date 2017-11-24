@@ -43,9 +43,11 @@
       tags: ['vagrant', 'virtualization']
     - role: docker
       become: yes
-      tags: ['virtualization']
+      tags: ['docker', 'virtualization']
     - role: vagrantup
       tags: ['vagrant']
+    - role: dockerpull
+      tags: ['docker']
 
   pre_tasks:
     - name: Wait for App Center (sigh...)
@@ -53,6 +55,8 @@
         while fuser /var/lib/apt/lists/lock; do sleep 1; done;
         while fuser /var/cache/apt/archives/lock; do sleep 1; done;
         while fuser /var/lib/dpkg/lock; do sleep 1; done;
+        killall -9 appcenter;
+        sleep 1;
       become: true
       args:
         executable: /bin/bash

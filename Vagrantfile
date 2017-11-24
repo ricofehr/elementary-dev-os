@@ -23,7 +23,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "ansible/elementary-dev.yml"
       ansible.verbose = true
-      # ansible.become = true
 
       ansible.extra_vars = {
         ansible_os_family: 'Debian',

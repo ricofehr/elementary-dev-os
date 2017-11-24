@@ -1,5 +1,10 @@
 ---
 
+- name: elementary-tweaks repositoy
+  apt_repository:
+    repo: 'deb http://ppa.launchpad.net/philip.scott/elementary-tweaks/ubuntu xenial main'
+  become: yes
+
 - name: Install packages
   apt: name={{ item }} state=installed update_cache=true force=yes
   with_items: "{{ devtools_packages }}"

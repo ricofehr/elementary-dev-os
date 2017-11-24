@@ -14,5 +14,8 @@ devtools_packages:
   - vlc
   - gnome-tweak-tool
   - software-properties-common
+  - cairo-dock
+  - dconf-editor
+  - elementary-tweaks
 
 franz_version: '5.0.0-beta.13'

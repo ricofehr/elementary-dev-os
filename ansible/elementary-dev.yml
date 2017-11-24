@@ -11,8 +11,10 @@
       tags: ['install']
     - role: base
       tags: ['install']
-    - role: devtools
+    - role: vim
       tags: ['devtool']
+    - role: devtools
+      tags: ['devtool', 'osx']
     - role: git
       become: yes
       tags: ['devtool', 'git']
@@ -33,15 +35,17 @@
     - role: FGtatsuro.python-requirements
       tags: ['install']
     - role: FGtatsuro.virtualbox
-      tags: ['virtualization']
+      tags: ['vagrant', 'virtualization']
     - role: libvirtd
       become: yes
-      tags: ['virtualization']
+      tags: ['vagrant', 'virtualization']
     - role: vagrant
-      tags: ['virtualization']
+      tags: ['vagrant', 'virtualization']
     - role: docker
       become: yes
       tags: ['virtualization']
+    - role: vagrantup
+      tags: ['vagrant']
 
   pre_tasks:
     - name: Wait for App Center (sigh...)

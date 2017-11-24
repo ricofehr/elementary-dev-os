@@ -21,16 +21,6 @@
     times: no
   become: yes
 
-- name: Install cairo dock
-  shell: >
-     add-apt-repository ppa:cairo-dock-team/ppa;
-     apt-get update;
-     apt-get install -y --force-yes cairo-dock;
-  args:
-    executable: /bin/bash
-  become: yes
-  when: not new_install.stat.exists
-
 - name: Sync local plank folder to remote
   synchronize:
     src: assets/elementary-osx-theme/Plank/
@@ -45,13 +35,16 @@
     compress: no
     times: no
 
-- name: Button-layout
+- name: Apply osx theme
   shell: >
     export DISPLAY=:0.0;
     gsettings set org.pantheon.desktop.gala.appearance button-layout close,minimize,maximize;
     gsettings set org.gnome.desktop.interface gtk-theme 'Light-Mode';
+    gsettings set org.gnome.desktop.interface icon-theme 'Light-Mode';
+    gsettings set org.gnome.desktop.interface cursor-theme 'Light-Mode';
     gsettings set org.gnome.desktop.wm.preferences theme 'Light-Mode';
-    gsettings set org.gnome.metacity theme 'Light-Mode';
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,minimize,maximize:menu'>, 'Gtk/DialogsUseHeader': <0>, 'Gtk/ShellShowsAppMenu': <0>}";
+    gsettings set org.gnome.desktop.wm.preferences button-layout close,minimize,maximize;
+    # gsettings set org.pantheon.desktop.cerbere monitored-processes "['wingpanel', 'cairo-dock']";
     gsettings set org.gnome.desktop.background picture-uri ~/.local/share/backgrounds/sierra.jpg;
-  args:
-    executable: /bin/bash
+    # killall -9 plank;

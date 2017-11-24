@@ -49,3 +49,9 @@
 [submodule "ansible/roles/libvirtd"]
 	path = ansible/roles/libvirtd
 	url = https://github.com/debops/ansible-libvirtd
+[submodule "ansible/roles/vim"]
+	path = ansible/roles/vim
+	url = https://github.com/ricofehr/ansible-role-vim
+[submodule "ansible/roles/dockerpull"]
+	path = ansible/roles/dockerpull
+	url = https://github.com/ricofehr/ansible-role-dockerpull

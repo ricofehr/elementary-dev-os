@@ -45,6 +45,4 @@
     gsettings set org.gnome.desktop.wm.preferences theme 'Light-Mode';
     gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,minimize,maximize:menu'>, 'Gtk/DialogsUseHeader': <0>, 'Gtk/ShellShowsAppMenu': <0>}";
     gsettings set org.gnome.desktop.wm.preferences button-layout close,minimize,maximize;
-    # gsettings set org.pantheon.desktop.cerbere monitored-processes "['wingpanel', 'cairo-dock']";
     gsettings set org.gnome.desktop.background picture-uri ~/.local/share/backgrounds/sierra.jpg;
-    # killall -9 plank;

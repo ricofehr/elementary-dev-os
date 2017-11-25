@@ -12,6 +12,7 @@ devtools_packages:
   - thunderbird
   - gimp
   - vlc
+  - golang-go
   - gnome-tweak-tool
   - software-properties-common
   - cairo-dock

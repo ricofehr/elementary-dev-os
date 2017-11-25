@@ -22,6 +22,8 @@
       tags: ['devtool', 'git']
     - role: repos
       tags: ['devtool', 'git']
+    - role: ansible
+      tags: ['devtool', 'vagrant']
     - role: fonts
       tags: ['webtool']
     - role: chrome
@@ -34,6 +36,11 @@
       tags: ['devtool']
     - role: FGtatsuro.python-requirements
       tags: ['install']
+    - role: docker
+      become: yes
+      tags: ['docker', 'virtualization']
+    - role: dockerpull
+      tags: ['docker']
     - role: FGtatsuro.virtualbox
       tags: ['vagrant', 'virtualization']
     - role: libvirtd
@@ -41,22 +48,26 @@
       tags: ['vagrant', 'virtualization']
     - role: vagrant
       tags: ['vagrant', 'virtualization']
-    - role: docker
-      become: yes
-      tags: ['docker', 'virtualization']
     - role: vagrantup
       tags: ['vagrant']
-    - role: dockerpull
-      tags: ['docker']
 
   pre_tasks:
-    - name: Wait for App Center (sigh...)
+    - name: Ensure gitmodules update
+      local_action: command git submodule update --init --recursive
+
+    - name: Stop package managers
       shell: >
         while fuser /var/lib/apt/lists/lock; do sleep 1; done;
         while fuser /var/cache/apt/archives/lock; do sleep 1; done;
         while fuser /var/lib/dpkg/lock; do sleep 1; done;
         killall -9 appcenter;
-        sleep 1;
+        killall -9 /usr/lib/packagekit/packagekitd;
+        sed -i 's/0/1/' /etc/apt/apt.conf.d/10periodic;
+        sed -i 's/0/1/' /etc/apt/apt.conf.d/20auto-upgrades;
+        sed -i 's/^Prompt=.*$/Prompt=never/' /etc/update-manager/release-upgrades;
+        systemctl disable apt-daily.service;
+        systemctl disable apt-daily.timer;
+        sleep 2;
       become: true
       args:
         executable: /bin/bash

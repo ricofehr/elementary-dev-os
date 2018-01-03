@@ -6,6 +6,7 @@
 
 # packer cache folder
 /packer_cache
+/output-virtualbox-iso
 
 # iso folder
 /iso/*

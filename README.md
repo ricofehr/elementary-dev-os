@@ -9,7 +9,7 @@ $ git submodule update --init --recursive
 ## Build vagrant box
 
 The elementary iso url is not static.
-If packer has "ISO download failed" issue, please update the iso url in elementary.json file with the good one (https://elementary.io/).
+If packer has "ISO download failed" issue, please update the iso url in elementary.json file with the good one (view https://elementary.io/).
 
 ```
 $ packer build elementary.json

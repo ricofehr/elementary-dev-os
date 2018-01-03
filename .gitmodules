@@ -43,9 +43,6 @@
 [submodule "ansible/roles/repos"]
 	path = ansible/roles/repos
 	url = https://github.com/ricofehr/ansible-role-repos
-[submodule "ansible/assets/elementary-osx-theme"]
-	path = ansible/assets/elementary-osx-theme
-	url = git@github.com:ricofehr/elementary-osx-theme
 [submodule "ansible/roles/libvirtd"]
 	path = ansible/roles/libvirtd
 	url = https://github.com/debops/ansible-libvirtd

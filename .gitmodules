@@ -52,3 +52,6 @@
 [submodule "ansible/roles/dockerpull"]
 	path = ansible/roles/dockerpull
 	url = https://github.com/ricofehr/ansible-role-dockerpull
+[submodule "ansible/assets/elementary-osx-theme"]
+	path = ansible/assets/elementary-osx-theme
+	url = https://github.com/ricofehr/elementary-osx-theme

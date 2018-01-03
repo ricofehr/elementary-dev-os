@@ -18,5 +18,6 @@ devtools_packages:
   - cairo-dock
   - dconf-editor
   - elementary-tweaks
+  - python-pip
 
 franz_version: '5.0.0-beta.13'

@@ -46,3 +46,6 @@
     gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,minimize,maximize:menu'>, 'Gtk/DialogsUseHeader': <0>, 'Gtk/ShellShowsAppMenu': <0>}";
     gsettings set org.gnome.desktop.wm.preferences button-layout close,minimize,maximize;
     gsettings set org.gnome.desktop.background picture-uri ~/.local/share/backgrounds/sierra.jpg;
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DialogsUseHeader': <0>, 'Gtk/ShellShowsAppMenu': <0>, 'Gtk/DecorationLayout': <'close:menu,maximize'>}"
+  args:
+    executable: /bin/bash

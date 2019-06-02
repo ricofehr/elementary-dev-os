@@ -43,9 +43,9 @@
 [submodule "ansible/roles/repos"]
 	path = ansible/roles/repos
 	url = https://github.com/ricofehr/ansible-role-repos
-[submodule "ansible/roles/libvirtd"]
-	path = ansible/roles/libvirtd
-	url = https://github.com/debops/ansible-libvirtd
+#[submodule "ansible/roles/libvirtd"]
+#	path = ansible/roles/libvirtd
+#	url = https://github.com/ricofehr/ansible-role-vim
 [submodule "ansible/roles/vim"]
 	path = ansible/roles/vim
 	url = https://github.com/ricofehr/ansible-role-vim

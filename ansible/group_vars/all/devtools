@@ -1,6 +1,8 @@
 ---
 
 devtools_packages:
+  - awscli
+  - libvirt-bin
   - firefox
   - tcpdump
   - ncftp
@@ -9,7 +11,6 @@ devtools_packages:
   - iperf
   - nmap
   - dia
-  - thunderbird
   - gimp
   - vlc
   - golang-go
@@ -19,5 +20,3 @@ devtools_packages:
   - dconf-editor
   - elementary-tweaks
   - python-pip
-
-franz_version: '5.0.0-beta.13'

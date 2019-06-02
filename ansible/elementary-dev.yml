@@ -43,9 +43,6 @@
       tags: ['docker']
     - role: FGtatsuro.virtualbox
       tags: ['vagrant', 'virtualization']
-    - role: libvirtd
-      become: yes
-      tags: ['vagrant', 'virtualization']
     - role: vagrant
       tags: ['vagrant', 'virtualization']
     - role: vagrantup

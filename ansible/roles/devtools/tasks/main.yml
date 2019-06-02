@@ -4,10 +4,6 @@
 
 - import_tasks: powerlinefonts.yml
 
-- import_tasks: franz.yml
-
 - import_tasks: hashicorp.yml
-
-- import_tasks: elementary-osx.yml
 
 - import_tasks: endtools.yml

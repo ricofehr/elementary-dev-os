@@ -2,7 +2,8 @@
 
 - name: elementary-tweaks repositoy
   apt_repository:
-    repo: 'deb http://ppa.launchpad.net/philip.scott/elementary-tweaks/ubuntu xenial main'
+    repo: ppa:philip.scott/elementary-tweaks 
+    #'deb http://ppa.launchpad.net/philip.scott/elementary-tweaks/ubuntu bionic main'
   become: yes
 
 - name: Install packages

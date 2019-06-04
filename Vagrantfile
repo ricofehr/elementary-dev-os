@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
       ansible.extra_vars = {
         ansible_os_family: 'Debian',
         ansible_distribution: 'Ubuntu',
-        ansible_distribution_release: 'xenial',
+        ansible_distribution_release: 'bionic',
         ansible_pkg_mgr: 'apt',
         keyboard_layout: 'fr'
       }

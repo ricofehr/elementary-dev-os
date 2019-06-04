@@ -1,28 +1,3 @@
 ---
 
 repos_list:
-    - git@github.com:ricofehr/ansible-role-base
-    - git@github.com:ricofehr/ansible-role-gitconfig
-    - git@github.com:ricofehr/ansible-role-repos
-    - git@github.com:ricofehr/asm-misc
-    - git@github.com:ricofehr/ceph-poc
-    - git@github.com:ricofehr/dockerfiles
-    - git@github.com:ricofehr/elementary-dev-os
-    - git@github.com:ricofehr/engine
-    - git@github.com:ricofehr/k8s-bigdata-poc
-    - git@github.com:ricofehr/mymac
-    - git@github.com:ricofehr/nd01
-    - git@github.com:ricofehr/net-tools
-    - git@github.com:ricofehr/nextalgos
-    - git@github.com:ricofehr/nextdeploy
-    - git@github.com:ricofehr/nextdeploy.io
-    - git@github.com:ricofehr/nextdeploy-cli
-    - git@github.com:ricofehr/nextdeploy-puppet
-    - git@github.com:ricofehr/nextdeploy-webui
-    - git@github.com:ricofehr/nextdeploy-android
-    - git@github.com:ricofehr/nextdeploy-blink1
-    - git@github.com:ricofehr/nextdeploy-dockerfiles
-    - git@github.com:ricofehr/nextdeploy-sop
-    - git@github.com:ricofehr/nextfloor
-    - git@github.com:ricofehr/nextsimplex
-    - git@github.com:ricofehr/tf-poc

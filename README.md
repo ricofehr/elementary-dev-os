@@ -13,7 +13,7 @@ If packer has "ISO download failed" issue, please update the iso url in elementa
 
 ```
 $ packer build elementary.json
-$ vagrant box add elementary-dev build/elementaryos-0.4.1-amd64.box
+$ vagrant box add elementary-dev build/elementaryos-5.0-stable-amd64.box
 ```
 
 ## Build vm

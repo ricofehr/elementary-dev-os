@@ -7,11 +7,11 @@
       "guest_os_type": "Ubuntu_64",
       "disk_size": 40960,
       "iso_urls": [
-        "./iso/elementaryos-0.4.1-stable.20170814.iso",
-        "https://fra1.dl.elementary.io/download/MTUxNTAxMjQzNg==/elementaryos-0.4.1-stable.20170814.iso"
+        "./iso/elementaryos-5.0-stable.20181016.iso",
+        "https://fra1.dl.elementary.io/download/MTU1OTY4Mzk4Ng==/elementaryos-5.0-stable.20181016.iso"
       ],
-      "iso_checksum": "a2a71ddeb3d31945eb0fc1afd7bfc14f",
-      "iso_checksum_type": "md5",
+      "iso_checksum": "a8c7b8c54aeb0889bb3245356ffcd95b77e9835ffb5ac56376a3b627c3e1950f",
+      "iso_checksum_type": "sha256",
       "boot_command": [
         "<esc><esc><esc><wait><enter><wait>",
         "/casper/vmlinuz",
@@ -51,7 +51,7 @@
   ],
   "post-processors": [
     {
-      "output": "build/elementaryos-0.4.1-amd64.box",
+      "output": "build/elementaryos-5.0-stable-amd64.box",
       "type": "vagrant"
     }
   ],
